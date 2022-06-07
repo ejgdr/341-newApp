@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -38,4 +39,6 @@ app.use(
     })
 );
 
-app.listen(4000);
+app.listen(port, () => {
+    console.log(`App listening on port ${port}`);
+  });
