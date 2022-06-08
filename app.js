@@ -48,7 +48,7 @@ app.use(
             events: () => {
                 return Event.find().then(events => {
                     return events.map(event => {
-                        return { ...event._doc, _id: event._doc._id.toString() };
+                        return { ...event._doc, _id: event.id }; // using mongoose is shorter
                     });
                 }).catch(err => {
                     throw err;
@@ -63,7 +63,7 @@ app.use(
                 });
                 return event.save().then(result => {
                     console.log(result);
-                    return { ...result._doc };
+                    return { ...result._doc, _id: result._doc._id.toString() }; //no mongoose is larger
                 }).catch(err => {
                     console.log(err);
                     throw err;
