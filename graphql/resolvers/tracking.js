@@ -3,7 +3,10 @@ const Tracking = require('../../models/tracking');
 const { transformEvent, transformTracking} = require('./merge');
 
 module.exports = {
-    trackings: async () => {
+    trackings: async (args, req) => {
+        if (!req.isAuth) {
+            throw new Error('User is not authenticated');
+        }
         try {
             const trackings = await Tracking.find();
             return trackings.map(tracking => {
@@ -13,7 +16,10 @@ module.exports = {
             throw err;
         }
     },
-    trackEvent: async args => {
+    trackEvent: async (args, req) => {
+        if (!req.isAuth) {
+            throw new Error('User is not authenticated');
+        }
         const fetchedEvent = await Event.findOne({ _id: args.eventId });
         const tracking = new Tracking({
             user: '62a0e208fc3afa4ba32ad88c',
@@ -22,7 +28,10 @@ module.exports = {
         const result = await tracking.save();
         return transformTracking(result);
     },
-    cancelTracking: async args => {
+    cancelTracking: async (args, req) => {
+        if (!req.isAuth) {
+            throw new Error('User is not authenticated');
+        }
         try {
             const tracking = await Tracking.findById(args.trackingId).populate('event');
             const event = transformEvent(tracking.event); 
