@@ -22,7 +22,7 @@ module.exports = {
         }
         const fetchedEvent = await Event.findOne({ _id: args.eventId });
         const tracking = new Tracking({
-            user: '62a0e208fc3afa4ba32ad88c',
+            user: '62a0394b904c2be8c67d8aec',
             event: fetchedEvent
         });
         const result = await tracking.save();

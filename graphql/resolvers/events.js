@@ -23,13 +23,13 @@ module.exports = {
             description: args.eventInput.description,
             price: +args.eventInput.price,
             date: new Date(args.eventInput.date),
-            creator: '62a0e208fc3afa4ba32ad88c'
+            creator: '62a0394b904c2be8c67d8aec'
         });
         let createdEvent;
         try{
         const result = await event.save()
             createdEvent = transformEvent(result);
-            const creator = await User.findById('62a0e208fc3afa4ba32ad88c')
+            const creator = await User.findById('62a0394b904c2be8c67d8aec')
             if(!creator) {
                 throw new Error ('User not found');
             }

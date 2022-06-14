@@ -24,7 +24,7 @@ module.exports = {
             throw err;
         };                
     },
-    login: async ({email, password}) => {
+    login: async ({ email, password }) => {
         const user = await User.findOne({ email: email });
         if (!user) {
             throw new Error('User does not exist!');
