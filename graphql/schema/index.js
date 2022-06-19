@@ -20,6 +20,11 @@ type Event {
 
 type User {
     _id: ID!
+    firstName: String!
+    lastName: String!
+    dateBirth: String!
+    age: Int!
+    originallyFrom: String!
     email: String!
     password: String
     createdEvents: [Event!]
@@ -39,6 +44,11 @@ input EventInput {
 }
 
 input UserInput {
+    firstName: String!
+    lastName: String!
+    dateBirth: String!
+    age: Int!
+    originallyFrom: String!
     email: String!
     password: String!
 }
