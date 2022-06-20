@@ -4,25 +4,25 @@ POST http://localhost:8000/graphql HTTP/1.1
 Content-Type: application/json
 
 {
-    "query": "query { login(email:\"johndoe@gmail.com\", password:\"johndoe\") { token }}"
+    "query": "query { login(email:\"jamesbond@gmail.com\", password:\"jamesbond\") { token }}"
 }
 
 ### Create an event
 POST http://localhost:8000/graphql HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlOTc0NjRmMzM2ZjE1Y2ExZTUwZWQiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwiaWF0IjoxNjU1NjE0MzU3LCJleHAiOjE2NTU2MTc5NTd9._sTvHFMeseXrhh1oIEkz9NbO1UgkxcucWQlQEXT-bLY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlYjY0MTk2NjUzZDJiYTVjMzI1YTYiLCJlbWFpbCI6ImphbWVzYm9uZEBnbWFpbC5jb20iLCJpYXQiOjE2NTU3NTg3MzQsImV4cCI6MTY1NTc2MjMzNH0.dYkybuBqTTJp7jAbfgPyDRIuDZN7eQugBrAM7KK9_DQ
 
 {
-    "query": "mutation { createEvent(eventInput: {title:\"Test 1\", description:\"Visit to Italy\", price: 1599.99, date:\"2022-06-10T01:00:09.206Z\"}) {_id title } }"
+    "query": "mutation { createEvent(eventInput: {title:\"Test 3\", description:\"Visit to Spain\", price: 2567.95, date:\"2022-06-11T01:00:09.206Z\"}) {_id title } }"
 }
 
 ### Get Events
 POST http://localhost:8000/graphql HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlOTc0NjRmMzM2ZjE1Y2ExZTUwZWQiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwiaWF0IjoxNjU1NjE0MzU3LCJleHAiOjE2NTU2MTc5NTd9._sTvHFMeseXrhh1oIEkz9NbO1UgkxcucWQlQEXT-bLY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlYjY0MTk2NjUzZDJiYTVjMzI1YTYiLCJlbWFpbCI6ImphbWVzYm9uZEBnbWFpbC5jb20iLCJpYXQiOjE2NTU3NTg3MzQsImV4cCI6MTY1NTc2MjMzNH0.dYkybuBqTTJp7jAbfgPyDRIuDZN7eQugBrAM7KK9_DQ
 
 {
-"query": "query{ trackings { createdAt } }"
+    "query": "query{ trackings { createdAt } }"
 }
 
 
@@ -38,8 +38,8 @@ Content-Type: application/json
 ### Create an event
 POST https://math-tracker.herokuapp.com/graphql HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlYTczNGVjZWRjYWRmZjNhMThjYmEiLCJlbWFpbCI6ImNhcm9sY29ubmVsQGdtYWlsLmNvbSIsImlhdCI6MTY1NTYxMzI5NSwiZXhwIjoxNjU1NjE2ODk1fQ.ICJ4ApIA6nU7uqchIKiw1Fm1w246PURXRGIm8C87fIc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlYjY0MTk2NjUzZDJiYTVjMzI1YTYiLCJlbWFpbCI6ImphbWVzYm9uZEBnbWFpbC5jb20iLCJpYXQiOjE2NTU2MTc0MTgsImV4cCI6MTY1NTYyMTAxOH0.25N3pQO4LIZVL944LtV3XbbmcNPSeuIkmuhXXgZR_zg
 
 {
-    "query": "mutation { createEvent(eventInput: {title:\"Test 2\", description:\"Visit to Spain\", price: 2567.95, date:\"2022-06-11T01:00:09.206Z\"}) {_id title } }"
+    "query": "mutation { createEvent(eventInput: {title:\"Test 4\", description:\"Visit to Spain\", price: 2567.95, date:\"2022-06-11T01:00:09.206Z\"}) {_id title } }"
 } 
