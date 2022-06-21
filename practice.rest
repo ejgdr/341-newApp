@@ -10,10 +10,10 @@ Content-Type: application/json
 ### Create an event
 POST http://localhost:8000/graphql HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlYjY0MTk2NjUzZDJiYTVjMzI1YTYiLCJlbWFpbCI6ImphbWVzYm9uZEBnbWFpbC5jb20iLCJpYXQiOjE2NTU3NTg3MzQsImV4cCI6MTY1NTc2MjMzNH0.dYkybuBqTTJp7jAbfgPyDRIuDZN7eQugBrAM7KK9_DQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlYjY0MTk2NjUzZDJiYTVjMzI1YTYiLCJlbWFpbCI6ImphbWVzYm9uZEBnbWFpbC5jb20iLCJpYXQiOjE2NTU3NzY0MjUsImV4cCI6MTY1NTc4MDAyNX0.ZKFftDIlY6zCk5T_jLTuT5yJTttipSCZyul-LnChPwM
 
 {
-    "query": "mutation { createEvent(eventInput: {title:\"Test 3\", description:\"Visit to Spain\", price: 2567.95, date:\"2022-06-11T01:00:09.206Z\"}) {_id title } }"
+    "query": "mutation { createEvent(eventInput: {title:\"Test 2\", description:\"Visit to Japan\", price: 2567.95, date:\"2022-06-11T01:00:09.206Z\"}) {_id title } }"
 }
 
 ### Get Events
@@ -38,8 +38,8 @@ Content-Type: application/json
 ### Create an event
 POST https://math-tracker.herokuapp.com/graphql HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlYjY0MTk2NjUzZDJiYTVjMzI1YTYiLCJlbWFpbCI6ImphbWVzYm9uZEBnbWFpbC5jb20iLCJpYXQiOjE2NTU2MTc0MTgsImV4cCI6MTY1NTYyMTAxOH0.25N3pQO4LIZVL944LtV3XbbmcNPSeuIkmuhXXgZR_zg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlOWQ5YzRmMzM2ZjE1Y2ExZTUwZjAiLCJlbWFpbCI6Imp1bGlhZGF5QGdtYWlsLmNvbSIsImlhdCI6MTY1NTc3NjYxNiwiZXhwIjoxNjU1NzgwMjE2fQ.Cvef_iITvQiaAx_VB7xCxpgW64xoQN2CsHMonol5U1g
 
 {
-    "query": "mutation { createEvent(eventInput: {title:\"Test 4\", description:\"Visit to Spain\", price: 2567.95, date:\"2022-06-11T01:00:09.206Z\"}) {_id title } }"
+    "query": "mutation { createEvent(eventInput: {title:\"Test 5\", description:\"Visit to New Zeland\", price: 6550.54, date:\"2022-06-11T01:00:09.206Z\"}) {_id title } }"
 } 
