@@ -23,7 +23,7 @@ type User {
     firstName: String!
     lastName: String!
     dateBirth: String!
-    age: Int!
+    age: String!
     originallyFrom: String!
     email: String!
     password: String
@@ -47,7 +47,7 @@ input UserInput {
     firstName: String!
     lastName: String!
     dateBirth: String!
-    age: Int!
+    age: String!
     originallyFrom: String!
     email: String!
     password: String!

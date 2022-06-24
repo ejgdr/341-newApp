@@ -17,7 +17,7 @@ module.exports = {
                 firstName: args.userInput.firstName,
                 lastName: args.userInput.lastName,
                 dateBirth: args.userInput.dateBirth,
-                age: +args.userInput.age,
+                age: args.userInput.age,
                 originallyFrom: args.userInput.originallyFrom,
                 email: args.userInput.email,
                 password: hashedPassword
